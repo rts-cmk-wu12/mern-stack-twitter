@@ -1,31 +1,21 @@
+import { useRoutes } from "react-router"
+import Navbar from "./components/Navbar"
+import routes from "~react-pages"
 
-import { useEffect, useState } from 'react'
-import './styles/App.scss'
 
-function App() {
-  const [data, setData] = useState([])
-  useEffect( ()=>{
-    async function fetchData(){
-      const response = await fetch("/api/post")
-      const data = await response.json()
-      setData(data)
-      console.log(data)
-    }
-fetchData()  
-  },[])
 
-  return (
-    <>
-    <h1>Twitter</h1>
-     {data.map((post, index)=>{ return ( 
-     <div key={index}>
-      <h2>{post.headline}</h2>
-      <p>{post.content}</p>
-     </div>
-     )
-    })}
-  </>
-  )
+ function App(){
+    return(
+        <>
+       
+          <Navbar></Navbar>
+          {useRoutes(routes)}
+        
+        </>
+
+    )
+
+   
 }
 
 export default App

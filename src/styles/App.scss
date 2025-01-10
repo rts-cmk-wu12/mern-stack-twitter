@@ -1,3 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 h1{
     text-align: center;
+}
+#root{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+header{
+    
+    grid-column: 1;
+}
+main{
+    grid-column: 2;
 }
