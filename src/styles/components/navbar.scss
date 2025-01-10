@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+  
+    &__list{
+        display: flex;
+       padding-top: 3rem;
+        gap: 3rem;
+       flex-direction: column;
+       align-content: center;
+       padding-left: 1rem;
+    }
+    &__listItem{
+        list-style: none;
+
+    }
+    &__link{
+        color:  #316FF6;
+        font-family: "Roboto", serif;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: 0.2s;
+        &:hover{
+            font-weight: 700;
+        }
+    }
+}
